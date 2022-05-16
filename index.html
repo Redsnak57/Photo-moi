@@ -7,6 +7,8 @@
     <title>Photo&moi</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="media.css">
+    <script src="https://kit.fontawesome.com/91ba61eb0c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <section class="page" id="accueil">
@@ -18,12 +20,37 @@
                 <a href="#creations">Mes créations</a>
                 <a href="#footer">Footer</a>
             </div>
-            <div class="buttons">
-                <button class="meContacter">Me contacter</button>
-            </div>
+            <button class="meContacter" id="myBtn">Me contacter</button>
         </nav>
         <!-- Fin nav -->
-    
+
+        <!-- Modal contacter-->
+
+        <div id="myModal" class="modal">
+
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h1>Formulaire de contact</h1>
+            
+            
+                <form action="" method="POST">
+                    <div class="social">
+                        <a href="facebook.com" target="new_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="linkedin.com" target="new_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                    <div class="inputs">
+                        <input type="text" name="nom" placeholder="Votre nom" required>
+                        <input type="text" name="prenom" placeholder="Votre prénom" required>
+                        <input type="email" name="email" placeholder="Votre adresse mail" required>
+                        <input type="number" name="number" placeholder="Votre numéro de téléphone" required>
+                        <textarea name="message" id="msg" placeholder="Votre message" required></textarea>
+                        <button class="envoyer"> Envoyer </button>
+                    </div>                   
+                </form>
+            </div>
+        </div>
+        <!-- FIn Modal contacter-->
+
         <!-- Header -->
         <header>
             <h1>La photographie a toujours été, ma passion.</h1>
@@ -32,7 +59,6 @@
 
         <!-- Mon matériel  -->
     
-        <p class="objectifs">Voici mes deux objectifs longue portée.</p>
         <div class="materiel" id="materiel">
             <div class="nikon">
                 <img src="asset/nikon.jpg" alt="">
@@ -49,11 +75,33 @@
         </div>
 
         <!-- Fin Mon matériel  -->
+
+        <!-- Créations -->
+            <section id="creations">
+                <div class="container1" data-aos="fade-right" data-aos-delay="50" data-aos-duration="1000">
+                    <img src="asset/foret1.jpg" alt="Foret">
+                    <img src="asset/foret2.jpg" alt="Foret">
+                    <img src="asset/foret3.jpg" alt="Foret">
+                </div>
+                <div class="container2" data-aos="fade-right" data-aos-delay="150" data-aos-duration="1000">
+                    <img src="asset/rives1.jpg" alt="Rives">
+                    <img src="asset/rives2.jpg" alt="Rives">
+                    <img src="asset/rives3.jpg" alt="Rives">
+                </div>
+                <div class="container3" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000">
+                    <img src="asset/montagne1.jfif" alt="Montagne">
+                    <img src="asset/montagne2.jpg" alt="Montagne">
+                    <img src="asset/montagne3.jpg" alt="Montagne">
+                </div>
+            </section>      
+        <!-- Fin Créations -->
     
     </section>
     <!-- footer -->
     <footer id="footer">
-        <h5>Des questions ? Appelez le 05-05-05-05-05</h5>
+        <h5>Des questions ? Appelez le 05-05-05-05-05</h5>  
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>       
         <div class="colonnes">
             <div class="colonne">
                 <p>Relation clients</p>
@@ -63,12 +111,19 @@
             <div class="colonne">
                 <p>Relation clients</p>
                 <p>Relation clients</p>
-                <p>Contact</p>
+                <a href="" id="accueil">Contact</a>
             </div>
         </div>
         <p>Redsnak &copy;2022</p>
     </footer>
      <!-- fin footer -->
+
+     <script src="js/modal.js"></script>
+     <script src="js/nav.js"></script>
+     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+     <script>
+       AOS.init();
+     </script>
 </body>
 </html>
 

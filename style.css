@@ -20,13 +20,17 @@ html {
 nav {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    position: sticky;
     top:0;
+    justify-content: space-between;  
     background-color: black;
     padding: 10px 0px;
+    z-index: 1;
 }
 
+.anim-nav {
+  position: sticky;
+  background-color: black;
+}
 
 .onglets {
     display: flex;
@@ -40,20 +44,117 @@ nav {
     margin-right: 20px;
 }
 
-.buttons button {
-    padding: 13px 20px;
-    border: none;
-    font-size: 15px;
-    cursor: pointer;
-    outline:none;
+.meContacter {
+  padding: 13px 20px;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  outline:none;
+  background-color: #f54266;
+  margin-right: 10px;
+  color: white;
 }
-.buttons .meContacter {
-    background-color: #f54266;
-    margin-right: 10px;
-    color: white;
+/* fin nav*/
+
+/* modal */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto /* Enable scroll if needed */
 }
 
-/* fin nav*/
+
+.modal-content {
+  background-color: #1a1a1a;
+  margin: 10% auto; /* 15% from the top and centered */
+  padding: 10px;
+  border: 1px solid #1a1a1a;
+  width: 30%; /* Could be more or less, depending on screen size */
+  border-radius: 10px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #f54266;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content h1 {
+  display: flex;
+  margin-left: 90px;
+  color : #f54266;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social {
+  margin-left: 20px;
+}
+
+.social i {
+  font-size: 20px;
+  margin: 2px;
+  margin-top: -50px;
+}
+
+.social a {
+  text-decoration: none;
+  color: white;
+}
+
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  width: 90%;
+} 
+
+form .inputs input {
+  padding: 10px;
+  border-radius: 5px;
+  border : none;
+  background-color: white;
+  margin-top: 15px;
+  outline: none;
+}
+
+textarea {
+  margin-top: 15px;
+  outline: none;
+  resize: none;
+  height: 80px;
+  border-radius: 5px;
+}
+
+.envoyer {
+  margin-top: 10px;
+  background-color: #f54266;
+  cursor: pointer;
+  font-size: 20px;
+  color: #aaa;
+  border:none;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+/* fin modal*/
 
 /* header */
 
@@ -190,9 +291,26 @@ header h1 {
     -webkit-transform: translateY(0px);
   }
 
-
-
 /* fin materiel */
+
+/* créations */ 
+
+.creations {
+  display: flex;
+}
+
+.container1, .container2, .container3{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.container1 img, .container2 img, .container3 img {
+  width: 30%;
+}
+/* fin créations */
 
 /* footer */
 footer {
