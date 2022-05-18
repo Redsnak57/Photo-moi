@@ -1,4 +1,4 @@
-@media screen and (max-width:640px){
+@media (max-width:500px){
     .page {
         margin: 10px;
     }
@@ -13,4 +13,84 @@
         font-size: 30px;
         padding: 100px;
     }
+
+    .modal-content {
+        width: 50%;
+    }
+
+    .nikon  {
+        height: 110px;
+    }
+
+    .nikon .fadedbox  {
+        width: 200px;
+        height: 100px;
+        padding: 130px 20px;
+    }
+
+    .nikon .title {
+        margin-top: -80px;
+        margin-left: -30%;
+        font-size: 1em;
+    }
+
+    .canon  {
+        height: 110px;
+    }
+
+    .canon .fadedbox  {
+        width: 200px;
+        height: 100px;
+        padding: 130px 20px;
+    }
+
+    .canon .title {
+        margin-top: -80px;
+        margin-left: -100%;
+        font-size: 1em;
+    }
+
+    .container1, .container2, .container3 {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .container1 img, .container2 img, .container3 img {
+        width: 80%;
+    }
+}
+
+@media (max-width:768px){
+
+    .nikon  {
+        height: 50%;
+        width: 50%;
+    }
+
+    .nikon .fadedbox  {
+        width: 250px;
+        height: 100px;
+        padding: 130px 20px;
+    }
+
+    .nikon .title {
+        margin-top: -40px;
+        font-size: 2em;
+    }
+
+    .canon  {
+        height: 50%;
+        width: 50%;
+    }
+    .canon .title {
+        margin-top: -40px;
+        margin-left: -25%;
+        font-size: 2em;
+    }
+
+    .container1 img , .container2 img , .container3 img{
+        width: 80%;
+
+    }
+
 }

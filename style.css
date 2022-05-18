@@ -6,6 +6,7 @@ body{
     padding: 0;
     margin: 0;
     color: #fff;
+    box-sizing: border-box;
 }
 
 .page {
@@ -20,7 +21,6 @@ html {
 nav {
     display: flex;
     flex-wrap: wrap;
-    top:0;
     justify-content: space-between;  
     background-color: black;
     padding: 10px 0px;
@@ -28,6 +28,7 @@ nav {
 }
 
 .anim-nav {
+  top:0;
   position: sticky;
   background-color: black;
 }
@@ -65,7 +66,7 @@ nav {
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  overflow: auto /* Enable scroll if needed */
+  overflow-y: hidden; /* Enable scroll if needed */
 }
 
 
@@ -94,7 +95,7 @@ nav {
 
 .modal-content h1 {
   display: flex;
-  margin-left: 90px;
+  margin-left: 30%;
   color : #f54266;
 }
 
@@ -159,7 +160,7 @@ textarea {
 /* header */
 
 header {
-    margin-top: 40px;
+    margin-top: 70px;
     background: url('asset/header1.jpg');
     background-repeat: no-repeat;
     background-position: center;
@@ -300,7 +301,7 @@ header h1 {
 }
 
 .container1, .container2, .container3{
-  margin-top: 30px;
+  margin-top: 100px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -308,7 +309,7 @@ header h1 {
 }
 
 .container1 img, .container2 img, .container3 img {
-  width: 30%;
+  width: 33%;
 }
 /* fin créations */
 
